@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	
+	<style>
+
+
+	</style>
+
+</head>
+<body>
+<button onclick="changeLevel()">按钮</button>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    function changeLevel(){
+        $.ajax({
+            url: 'http://abc.com/v2/coupon/grantUser?appid=mall',
+            method: 'GET',
+            data: {'batchId':20210318175238},
+			crossDomain: true,
+			xhrFields: {
+				withCredentials: true    // 前端设置是否带cookie
+			},
+            success: function (data) {
+                console.log(data)
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
